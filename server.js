@@ -24,11 +24,11 @@ const upload = multer({
 
 // Routes
 app.get('/', (req, res) => {
-  res.json({ status: 'Expense Tracker API is running' });
+  res.json({ status: 'Hello from Railway!' });
 });
 
 // LINE Webhook
-app.post('/webhook', lineWebhook);
+// app.post('/webhook', lineWebhook);
 
 // Health check
 app.get('/health', (req, res) => {
@@ -45,3 +45,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
+console.log('ENV:', process.env);
